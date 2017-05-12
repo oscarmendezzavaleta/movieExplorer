@@ -39,24 +39,7 @@ angular.module('starter', ['ionic', 'FilmsModule'])
          }
        }
   })
-  .state('app.films', {
-    url: '/films',
-     views: {
-        'content': {
-           templateUrl: 'js/app/films/films.html',
-           controller:'FilmsController'
-         }
-       }
-  })
-   .state('app.films-details', {
-    url: '/films-details',
-     views: {
-        'content': {
-           templateUrl: 'js/app/films/films-details.html'
-         }
-       }
-  })
-
+  
  
   $urlRouterProvider.otherwise('app/about');
 });
