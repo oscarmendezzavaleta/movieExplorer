@@ -1,8 +1,15 @@
-<ion-view view-title="films">
-  <ion-content>
-      <ion-list>
-          <ion-item ui-sref="app.films-details" ng-repeat="film in films">{{film.title}}</ion-item>
-      </ion-list>
-  </ion-content>
-</ion-view>
+<ion-view view-title="films" id="films">
+    <ion-content>
+        <ion-list>
+            <ion-item class="item-thumbnail-left" ui-sref="app.films-details({filmTitle:'{{film.title}}'})" ng-repeat="film in films">
+                <img style="background-image:url({{film.poster}})">
+                <div class="info">
+                    <H2>{{film.title}}</H2>
+                    <p>{{film.director}} -{{film.year}} </p>
+                </div>
 
+                <p class="rating">Rating: {{film.imdbRating}} </p>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

@@ -1,6 +1,26 @@
-<ion-view view-title="films detalis">
+<ion-view view-title="films detalis" id="filmsDetails">
 <ion-content>
-    <p>detalles  {{films.title}}</p>
+    <div class="card">
+        <ion-item>
+            <div class="infoLeft">
+                <h2>{{films.title}}</h2>
+                <p>{{films.director}}</p>
+                <p>{{films.actors}}</p>
+            </div>
+            <div class="infoRight">
+                <p>{{films.year}}</p>
+                <p>{{films.runtime}}</p>
+                <p>{{films.imdbRating}}</p>
+            </div>
+        </ion-item>
+
+        <ion-item class="item-image">
+             <img src="{{films.poster}}">>
+        </ion-item>
+        <ion-item class="item-body">  
+            <p>{{films.plot}}</p>
+        </ion-item>
+    </div>
 </ion-content>
 
 </ion-view>
