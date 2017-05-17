@@ -12,7 +12,7 @@ angular.module('FilmModel',[])
      this.imdbRating=imdbRating;
  }
  Film.build=function(data){
-     if (!data)
+     if(!data)
      return null;
      return new Film(data.Title,data.Year,data.Runtime,data.Director,data.Actors,data.Plot,data.Poster,data.imdbRating);
  }
